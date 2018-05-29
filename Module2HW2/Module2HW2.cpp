@@ -180,7 +180,7 @@ void main()
 			else if ((y > x&&y > z) && (pow(y, 2) < pow(x, 2) + pow(z, 2))) {
 				printf("треугольник остроугольный\n");
 			}
-			else if ((z > x&&z > y) && (pow(z, 2) < (pow(x, 2) + pow(y, 2)))) {
+			else if ((z > x&&z > y) && (pow(z, 2) < pow(x, 2) + pow(y, 2))) {
 				printf("треугольник остроугольный\n");
 			}
 			else {

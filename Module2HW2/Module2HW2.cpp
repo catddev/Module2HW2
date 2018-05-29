@@ -147,7 +147,25 @@ void main()
 		то оба значения уменьшить в 10 раз; в остальных случаях х и у оставить без изменения.*/
 
 		float x, y;
-
-
+		printf("введите два числа:\n");
+		scanf("%f %f", &x, &y);
+		if (x < 0 && y < 0) {
+			x = fabs(x);
+			y = fabs(y);
+			printf("x=%f \ny=%f \n", x, y);
+		}
+		else if ((x > 0 && y < 0) || (x < 0 && y>0)) {
+			x = x + 0.5;
+			y = y + 0.5;
+			printf("x=%f \ny=%f \n", x, y);
+		}
+		else if ((x > 0 && y > 0) && (x<0.5 || x>2.0) && (y<0.5 || y>2.0)) {
+			x = x / 10;
+			y = y / 10;
+			printf("x=%f \ny=%f \n", x, y);
+		}
+		else {
+			printf("x=%f \ny=%f \n", x, y);
+		}
 	}
 }

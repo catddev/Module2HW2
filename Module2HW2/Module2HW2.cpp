@@ -110,29 +110,34 @@ void main()
 		float x, y, z;
 		printf("введите три числа:\n");
 		scanf("%f %f %f", &x, &y, &z);
-		if ((x + y + z < 1) && (x != y && y != z)) {
-			if (x < y&&x < z) {
-				x = (y + z) / 2;
-				printf("x=%f\n", x);
+		if (x != y && y != z) {
+			if (x + y + z < 1) {
+				if (x < y&&x < z) {
+					x = (y + z) / 2;
+					printf("x=%f \ny=%f \nz=%f", x, y, z);
+				}
+				else if (y < x&&y < z) {
+					y = (x + z) / 2;
+					printf("x=%f \ny=%f \nz=%f", x, y, z);
+				}
+				else if (z < y&&z < x) {
+					z = (x + y) / 2;
+					printf("x=%f \ny=%f \nz=%f", x, y, z);
+				}
 			}
-			else if (y < x&&y < z) {
-				y = (x + z) / 2;
-				printf("y=%f\n", y);
-			}
-			else if (z < y&&z < x) {
-				z = (x + y) / 2;
-				printf("z=%f\n", z);
+			else {
+				if (x < y) {
+					x = (z + y) / 2;
+					printf("x=%f \ny=%f \nz=%f", x, y, z);
+				}
+				else {
+					y = (x + z) / 2;
+					printf("x=%f \ny=%f \nz=%f", x, y, z);
+				}
 			}
 		}
 		else {
-			if (x < y) {
-				x = (z + y) / 2;
-				printf("x=%f\n", x);
-			}
-			else {
-				y = (x + z) / 2;
-				printf("y=%f\n", y);
-			}
+			printf("числа не должны быть попарно равны. ¬ведите другие числа\n");
 		}
 	}
 }

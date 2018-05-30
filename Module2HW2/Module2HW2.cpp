@@ -232,7 +232,7 @@ void main()
 		else {
 			printf("корней нет\n");
 		}
-		}
+	}
 
 	else if (v == 10) {
 		/* 10. Дано действительное число х. Получить
@@ -243,11 +243,12 @@ void main()
 		float x;
 		printf("x=%f\n");
 		scanf("%f", &x);
+		
 
 
 	}
 	else {
 		printf("нет заданий");
 	}
-	}
+}
 

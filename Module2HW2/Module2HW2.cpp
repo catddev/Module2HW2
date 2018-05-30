@@ -246,13 +246,13 @@ void main()
 		scanf("%f", &x);
 
 		a = (int)x;
-		printf("a) %lf\n", a);
+		printf("a) целая часть числа: %lf\n", a);
 
 		b = roundf(x);
-		printf("б) %lf\n", b);
+		printf("б) округленное до ближайшего целого: %lf\n", b);
 
 		c = modf(x, &d);
-		printf("в) %lf\n", d);
+		printf("в) число без дробных цифр: %lf\n", d);
 	}
 	else {
 		printf("нет заданий");
